@@ -153,7 +153,7 @@ async function Btn_conectar_click() {
       onTxCharacteristicValueChanged
     );
     Update_progresso(6 / 7);
-
+ 
 
     Log_user("A obter char RX...");
     rxCharacteristic = await service.getCharacteristic(
