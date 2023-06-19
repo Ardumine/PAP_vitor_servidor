@@ -1,3 +1,5 @@
+//node server.js
+
 console.log("A iniciar...");
 
 const https = require("https");
@@ -11,8 +13,13 @@ const fs = require("fs");
 
   
 app.get("*", function (req, res) {
-    console.log("." + req.path);
-  res.sendFile(__dirname + req.path);
+  try{
+    res.sendFile(__dirname + req.path);
+
+  }
+  catch{
+    res.sendStatus(404);
+  }
 });
   
 
@@ -26,7 +33,8 @@ const options = {
 };
   
 
-https.createServer(options, app)
-.listen(5501, function (req, res) {
-  console.log("Servidor iniciado!");
+var servidor = https.createServer(options, app);
+
+servidor.listen(5501, function (req, res) {
+  console.log("Servidor iniciado! https://localhost:5501/main.html");
 });
