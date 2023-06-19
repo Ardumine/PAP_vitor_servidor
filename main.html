@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Recetor</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+
+    <div class="progress">
+      <div class="bar" id="progresso"></div>
+      <span class="label" id="label_prg">0%</span>
+    </div>
+
+    <div class="Btn">
+      <button id="btn_cnt" onclick="Btn_conectar_click()"></button>
+      <button id="btn_disc" onclick="Btn_dis_click()"></button>
+      <button id="btn_ping" onclick="Btn_ping_click()"></button>
+    </div>
+    <div id="logs" class="Logs">
+      
+    </div>
+
+    
+    <script>
+      var exports = {};
+    </script>
+
+    <script src="ts-built/scr.js"></script>
+  </body>
+</html>
