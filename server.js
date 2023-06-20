@@ -36,5 +36,6 @@ const options = {
 var servidor = https.createServer(options, app);
 
 servidor.listen(5501, function (req, res) {
+  console.log("Se o link não der no opera, !!ABRIR NO EDGE!!");
   console.log("Servidor iniciado! https://localhost:5501/main.html");
 });
