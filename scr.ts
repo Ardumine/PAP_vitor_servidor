@@ -346,7 +346,7 @@ function onTxCharacteristicValueChanged(event) {
     let json_rec = JSON.parse(ultimo_txt);
 
     if(json_rec["t"] == "st"){
-        Log_user("Local crrt: " + Lugares[json_rec["lc"]] + " " + json_rec["l1"] + ";" + json_rec["l2"]);
+        Log_user("Local crrt: " + Lugares[json_rec["lc"]] + " " + json_rec["l1"] + ";" + json_rec["l2"] + " Lugar obj:" +  Lugares[json_rec["lotg "]]);
     }
     // ws_pc.send(ultimo_txt);
 
