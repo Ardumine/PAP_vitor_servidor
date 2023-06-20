@@ -14,8 +14,7 @@ let conectado = false;
 
 
 
-
-Update_progresso(0);
+Update_progresso(10);
 
 //connectButton = createButton("button");
 var elem_logs = <HTMLButtonElement>document.getElementById("logs");
