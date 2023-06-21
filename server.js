@@ -12,13 +12,13 @@ exec('tsc', (err, output) => {
         process.exit(1)
     }
     // log the output received from the command
-    console.log("Saida: \n", output)
+    console.log("Saida: ", output)
 })
+
 
 
 const https = require("https");
   
-// Express for handling GET and POST request
 const express = require("express");
 const app = express();
   
