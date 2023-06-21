@@ -1,6 +1,8 @@
 //node server.js
 console.log("A iniciar...");
 console.log("A compilar de novo...");
+console.log("");
+
 const { exec } = require('node:child_process')
 
 // run the `ls` command using exec
@@ -12,7 +14,8 @@ exec('tsc', (err, output) => {
         process.exit(1)
     }
     // log the output received from the command
-    console.log("Saida: ", output)
+    console.log("");
+    console.log("Saida compilacao: ", output)
 })
 
 
