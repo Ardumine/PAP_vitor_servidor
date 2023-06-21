@@ -17,7 +17,7 @@ let uBitDevice;
 let rxCharacteristic;
 let ws_pc;
 let conectado = false;
-Update_progresso(10);
+Update_progresso(0);
 //connectButton = createButton("button");
 var elem_logs = document.getElementById("logs");
 var btn_cnt = document.getElementById("btn_cnt");
@@ -245,7 +245,7 @@ function onTxCharacteristicValueChanged(event) {
         Log_user("Rec: '" + ultimo_txt + "' (" + String(ultimo_txt.length) + ")");
         let json_rec = JSON.parse(ultimo_txt);
         if (json_rec["t"] == "st") {
-            Log_user("Local crrt: " + Lugares[json_rec["lc"]] + " " + json_rec["l1"] + ";" + json_rec["l2"] + " Lugar obj:" + Lugares[json_rec["lotg "]]);
+            Log_user("Local crrt: " + Lugares[json_rec["lc"]] + " Lugar obj:" + Lugares[json_rec["lotg "]]);
         }
         ws_pc.send(ultimo_txt);
         ultimo_txt = "";

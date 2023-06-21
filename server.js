@@ -1,5 +1,20 @@
 //node server.js
 console.log("A iniciar...");
+console.log("A compilar de novo...");
+const { exec } = require('node:child_process')
+
+// run the `ls` command using exec
+exec('tsc', (err, output) => {
+    // once the command has completed, the callback function is called
+    if (err) {
+        // log and return if we encounter an error
+        console.error("ERRO A EXECUTAR: ", err)
+        process.exit(1)
+    }
+    // log the output received from the command
+    console.log("Saida: \n", output)
+})
+
 
 const https = require("https");
   
